@@ -1,9 +1,11 @@
+<pre>
 @ author :xzy
 @ email: xuezhiyou001@foxmail.com
 @ time: 2017.7
 CIFAR-10 是一个常用于图像识别的一个benchmark例子，关于它的介绍可以参考
 http://www.cs.toronto.edu/~kriz/cifar.html
 本项目是针对官方例子改写，并对注释加入了自己的理解，使用训练模型能实现对单张图片的验证
+注意根据具体情况修改相应的目录，最简单的方法是将/home/xzy 更改成你自己的用户目录
 
 文件说明：
 cifar10.py : 构建CIFAR-10神经网络操作，包括inference、loss、train、evaluation
@@ -18,4 +20,14 @@ transpose_test.py : 针对理解矩阵转置函数而写的一个简单例子
 lrn.py ： 针对局部响应标准化而写的一个建安例子
 strided_slice.py ： 针对跨步长分片的一个例子
 
+
+最终的效果：
++-------+-------+-------------+
+| index | class | probability |
++-------+-------+-------------+
+| 3     |  cat  |   0.530751  |
+| 5     |  dog  |   0.491245  |
+| 2     |  bird |   0.139152  |
++-------+-------+-------------+
+</pre>
 
