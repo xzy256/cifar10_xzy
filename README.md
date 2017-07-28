@@ -17,8 +17,8 @@ cifar10_multi_gpu.py :本人的机器只能跑CPU版本的TF, 所以对于多GPU
 photo_to_lmdb.py : 将图片转化成lmdb格式，暂时未使用
 <test>
 transpose_test.py : 针对理解矩阵转置函数而写的一个简单例子
-lrn.py ： 针对局部响应标准化而写的一个建安例子
-strided_slice.py ： 针对跨步长分片的一个例子
+lrn.py ： 针对理解局部响应标准化而写的一个简单例子
+strided_slice.py ： 针对理解跨步长分片的一个简单例子
 
 
 最终的效果：
