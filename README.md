@@ -2,11 +2,11 @@
 @ author :xzy
 @ email: xuezhiyou001@foxmail.com
 @ time: 2017.7
-CIFAR-10 是一个常用于图像识别的一个benchmark例子，关于它的介绍可以参考
-http://www.cs.toronto.edu/~kriz/cifar.html
-本项目是针对官方例子改写，并对注释加入了自己的理解，使用训练模型能实现对单张图片的验证
-注意根据具体情况修改相应的目录，最简单的方法是将/home/xzy 更改成你自己的用户目录
+</pre>
 
+CIFAR-10 是一个常用于图像识别的一个benchmark例子，关于它的介绍可以参考[The CIFAR-10 dataset](http://www.cs.toronto.edu/~kriz/cifar.html)
+本项目是针对官方例子改写，并对注释加入了自己的理解，使用训练模型能实现对单张图片的验证,注意根据具体情况修改相应的目录，最简单的方法是将/home/xzy 更改成你自己的用户目录或者其他目录
+<pre>
 文件说明：
 cifar10.py : 构建CIFAR-10神经网络操作，包括inference、loss、train、evaluation
 cifar10_eval.py : 运行验证集模型
@@ -31,3 +31,4 @@ strided_slice.py ： 针对跨步长分片的一个例子
 +-------+-------+-------------+
 </pre>
 
+可以访问我的博客链接，讲解了一些内容[Tensorflow如何使用自己cifar10训练模型检测一张任意的图片](http://blog.csdn.net/banana1006034246/article/details/76239147)
