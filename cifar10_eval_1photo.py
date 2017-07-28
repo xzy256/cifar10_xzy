@@ -12,7 +12,7 @@ tf.app.flags.DEFINE_string('checkpoint_dir', '/home/xzy/cifar10_train_xzy',
                            """Directory where to read model checkpoints.""")
 tf.app.flags.DEFINE_string('class_dir', '/home/xzy/cifar10-input/cifar-10-batches-bin/',
                            """存储文件batches.meta.txt的目录""")
-tf.app.flags.DEFINE_string('test_file', '/home/xzy/dog.jpg', """测试用的图片""")
+tf.app.flags.DEFINE_string('test_file', 'dog.jpg', """测试用的图片，可以是绝对路径""")
 IMAGE_SIZE = 24
 
 
@@ -45,8 +45,8 @@ def load_trained_model(logits):
         index = np.array(output[1]).flatten()
         # 使用表格的方式显示
         tabel = PrettyTable(["index", "class", "probability"])
-        tabel.align["index"] = "l"  # Left align city names
-        tabel.padding_width = 1  # One space between column edges and contents (default)
+        tabel.align["index"] = "l"  # 左边界
+        tabel.padding_width = 1  # padding值，默认为1
         for i in np.arange(index.size):
             tabel.add_row([index[i], cifar10_class[index[i]], probability[i]])
         print tabel
