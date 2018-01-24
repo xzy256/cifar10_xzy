@@ -33,7 +33,7 @@ strided_slice.py ： 针对理解跨步长分片的一个简单例子
 
 注意：
 1.事先安装prettytable
->sudo pip install prettytable
+`sudo pip install prettytable`
 
 
 2.先执行train，再执行验证
