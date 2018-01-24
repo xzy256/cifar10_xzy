@@ -38,7 +38,7 @@ FLAGS = tf.app.flags.FLAGS
 
 # 参数设置
 tf.app.flags.DEFINE_integer('batch_size', 128, """Number of images to process in a batch.""")
-tf.app.flags.DEFINE_string('data_dir', '/home/xzy/cifar10-input', """Path to the CIFAR-10 data directory.""")
+tf.app.flags.DEFINE_string('data_dir', 'cifar10-input', """Path to the CIFAR-10 data directory.""")
 tf.app.flags.DEFINE_boolean('use_fp16', False, """Train the model using fp16.""")
 
 # 描述CIFAR-10数据集的全局常量,来自cifar_input.py文件
@@ -170,7 +170,7 @@ def inputs(eval_data):
     return images, labels
 
 
-def inference(images, batch_size=FLAGS.batch_size):
+def inference(images, batch_size=128):
     """前向预测
 
   Args:

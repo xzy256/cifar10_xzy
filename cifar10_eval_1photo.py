@@ -8,9 +8,9 @@ import numpy as np
 
 FLAGS = tf.app.flags.FLAGS
 # 设置存储模型训练结果的路径
-tf.app.flags.DEFINE_string('checkpoint_dir', '/home/xzy/cifar10_train_xzy',
+tf.app.flags.DEFINE_string('checkpoint_dir', 'cifar10_train_xzy',
                            """Directory where to read model checkpoints.""")
-tf.app.flags.DEFINE_string('class_dir', '/home/xzy/cifar10-input/cifar-10-batches-bin/',
+tf.app.flags.DEFINE_string('class_dir', 'cifar10-input/cifar-10-batches-bin/',
                            """存储文件batches.meta.txt的目录""")
 tf.app.flags.DEFINE_string('test_file', 'dog.jpg', """测试用的图片，可以是绝对路径""")
 IMAGE_SIZE = 24
@@ -61,7 +61,7 @@ def img_read(filename):
     width = IMAGE_SIZE
     image = tf.image.resize_images(image_data, (height, width), method=ResizeMethod.BILINEAR)
     image = tf.expand_dims(image, -1)
-    image = tf.reshape(image, (1, 24, 24, 3))
+    image = tf.reshape(image, (1, IMAGE_SIZE, IMAGE_SIZE, 3))
     return image
 
 
