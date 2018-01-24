@@ -39,7 +39,6 @@ strided_slice.py ： 针对理解跨步长分片的一个简单例子
 2.先执行train，再执行验证
 >python cifar10_train.py
 
-
 >python cifar10_eval_1photo.py
 
 
